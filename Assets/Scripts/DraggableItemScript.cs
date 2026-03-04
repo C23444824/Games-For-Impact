@@ -11,6 +11,7 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
+        transform.position = Input.mousePosition;
     }
 
     public void OnDrag(PointerEventData eventData)
