@@ -16,6 +16,7 @@ public class CoffeeScript : MonoBehaviour
         Debug.Log("Collision");
         if (other.CompareTag("Customer"))
         {
+            
             Debug.Log("Customer detected");
         }
     }
