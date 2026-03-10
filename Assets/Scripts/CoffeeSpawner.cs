@@ -32,8 +32,15 @@ public class CoffeeSpawner : MonoBehaviour
 
         public void RandomLocation()
         {
-            // Instance coffee cups
-            //Pick random destination based on coffee cup
-            nextTarget = exit;
+            nextTarget = chairs[Random.Range(0, chairs.Length)];
+            // if (Random.Range(1, 2) == 1)
+            // {
+            //     nextTarget = exit;
+            // }
+            // else
+            // {
+            //     
+            // }
+            Debug.Log(nextTarget.gameObject);
         }
 }
