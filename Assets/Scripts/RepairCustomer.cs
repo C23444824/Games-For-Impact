@@ -12,6 +12,7 @@ public class RepairCustomer : MonoBehaviour
         gameObject.GetComponent<NavMeshAgent>().SetDestination(repairDest.position);
     }
     //Choosing a random clothing item
+    //
     //void clothingPicker()
     //{
     //  pickedClothing = repairClothes[Random.Range(0, repairClothes.Length)];
