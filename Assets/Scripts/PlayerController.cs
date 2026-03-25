@@ -10,10 +10,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform objectHit;
     [SerializeField] private bool isHit;
     [SerializeField] private float rotationSpeed;
+    public bool dragging = false;
     
     private void Update()
     {
-        if (isFixing && Input.GetMouseButton(0))
+        if (isFixing && Input.GetMouseButton(0) && !dragging)
         {
             RayToGarment();
         }
