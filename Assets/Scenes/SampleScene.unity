@@ -2594,7 +2594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f88c1d9c0bcf2241801903d44534e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RepairCustomerDest
-  popUP: {fileID: 2044376878}
+  popUP: {fileID: 785396316}
   GarmentSpawner: {fileID: 678908107}
 --- !u!4 &737908814
 Transform:
