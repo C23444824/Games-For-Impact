@@ -7,6 +7,7 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
 {
     private Vector3 startTransform;
     private PlayerController controller;
+    private bool canDrag;
 
     private void Start()
     {
@@ -21,10 +22,12 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
     {
         transform.position = Input.mousePosition;
         controller.dragging = true;
+        canDrag = true;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        if(canDrag)
         transform.position = Input.mousePosition;
         controller.dragging = true;
         RaycastHit hit;
@@ -32,6 +35,7 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
         if (Physics.Raycast(r, out hit) && hit.transform.tag == "Hole")
         {
             Destroy(hit.transform.gameObject);
+            canDrag = false;
         }
     }
 
@@ -39,5 +43,6 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
     {
         controller.dragging = false;
         transform.position = startTransform;
+        canDrag = true;
     }
 }
