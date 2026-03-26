@@ -13,7 +13,7 @@ public class CoffeeCustomer : MonoBehaviour
     private void Start()
     {
         Till = GameObject.Find("CoffeeCustomerDestination");
-        cup = GameObject.Find("Cup");
+        cup = transform.Find("Cup").gameObject;
         cup.SetActive(false);
         animator = GetComponentsInChildren<Animator>();
         navMesh = gameObject.GetComponent<NavMeshAgent>();
