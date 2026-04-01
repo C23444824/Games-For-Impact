@@ -1,13 +1,16 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private Vector3 startTransform;
     private PlayerController controller;
     private bool canDrag;
+    public GameObject Corner;
 
     private void Start()
     {
@@ -32,7 +35,21 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
         controller.dragging = true;
         RaycastHit hit;
         Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(r, out hit) && hit.transform.tag == "Hole")
+        if (Physics.Raycast(r, out hit) && hit.transform.tag == "Hole" && gameObject.tag == "Patch")
+        {
+            List<Transform> anchors = new List<Transform>();
+            foreach (Transform child in hit.transform)
+            {
+                anchors.Add(child);
+            }
+            Destroy(hit.transform.gameObject);
+            canDrag = false;
+            foreach (var anchor in anchors)
+            {
+                Instantiate(Corner, anchor.transform);
+            }
+        }
+        if (Physics.Raycast(r, out hit) && hit.transform.tag == "Corners" && gameObject.tag == "Needle")
         {
             Destroy(hit.transform.gameObject);
             canDrag = false;

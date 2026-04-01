@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: PlasticCoffeeCup
-    second: {fileID: 2100000, guid: a6e8aa3d3ce82394db5159e1b3b133fd, type: 2}
+    second: {fileID: 2100000, guid: 0779989870559a34d9548335ff7aaaf3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

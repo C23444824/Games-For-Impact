@@ -9,6 +9,8 @@ TagManager:
   - Garment
   - Hole
   - Anchor
+  - Patch
+  - Needle
   layers:
   - Default
   - TransparentFX
