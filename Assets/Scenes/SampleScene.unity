@@ -6354,6 +6354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a1ec6f3f78a3b4299d8c5dfce7ec23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  Corner: {fileID: 6263218704343119722, guid: aa6a714617abfd94788f1836cbc8a32b, type: 3}
+  controller: {fileID: 0}
 --- !u!222 &1195214356
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6540,7 +6542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1224907110
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6886,6 +6888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a1ec6f3f78a3b4299d8c5dfce7ec23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  Corner: {fileID: 6263218704343119722, guid: aa6a714617abfd94788f1836cbc8a32b, type: 3}
+  controller: {fileID: 0}
 --- !u!222 &1266321624
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7248,6 +7252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a1ec6f3f78a3b4299d8c5dfce7ec23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  Corner: {fileID: 6263218704343119722, guid: aa6a714617abfd94788f1836cbc8a32b, type: 3}
+  controller: {fileID: 0}
 --- !u!222 &1286288066
 CanvasRenderer:
   m_ObjectHideFlags: 0

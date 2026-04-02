@@ -8,13 +8,16 @@ using UnityEngine.UI;
 public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private Vector3 startTransform;
-    private PlayerController controller;
+    private GameObject camera;
     private bool canDrag;
     public GameObject Corner;
+    [SerializeField] private PlayerController controller;
 
     private void Start()
     {
-        controller = GameObject.Find("WorkshopCam").GetComponent<PlayerController>();
+        camera = GameObject.Find("WorkshopCam");
+        controller = camera.GetComponent<PlayerController>();
+
     }
 
     void Awake()
@@ -41,15 +44,19 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
             foreach (Transform child in hit.transform)
             {
                 anchors.Add(child);
+                Debug.Log(anchors);
             }
-            Destroy(hit.transform.gameObject);
-            canDrag = false;
             foreach (var anchor in anchors)
             {
-                Instantiate(Corner, anchor.transform);
+                var CornerInst = Instantiate(Corner, anchor.position, anchor.rotation);
+                CornerInst.tag = "Corner";
+                Debug.Log(CornerInst);
             }
+            hit.transform.gameObject.SetActive(false);
+            canDrag = false;
+            
         }
-        if (Physics.Raycast(r, out hit) && hit.transform.tag == "Corners" && gameObject.tag == "Needle")
+        if (Physics.Raycast(r, out hit) && hit.transform.tag == "Corner" && gameObject.tag == "Needle")
         {
             Destroy(hit.transform.gameObject);
             canDrag = false;
