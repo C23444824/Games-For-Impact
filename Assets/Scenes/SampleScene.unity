@@ -1976,32 +1976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190e8366b5b8b1247840e66e4095bfd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ItemProfile:
-    balance: 0
-    item1Name: 
-    item1Quantity: 0
-    item1Price: 0
-    item2Name: 
-    item2Quantity: 0
-    item2Price: 0
-    item3Name: 
-    item3Quantity: 0
-    item3Price: 0
-    item4Name: 
-    item4Quantity: 0
-    item4Price: 0
-    item5Name: 
-    item5Quantity: 0
-    item5Price: 0
-    item6Name: 
-    item6Quantity: 0
-    item6Price: 0
-    item7Name: 
-    item7Quantity: 0
-    item7Price: 0
-    item8Name: 
-    item8Quantity: 0
-    item8Price: 0
+  InventoryScript: {fileID: 0}
   nextTarget: {fileID: 56003812}
   particle: {fileID: 18502747}
 --- !u!82 &287918578
